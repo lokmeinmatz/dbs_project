@@ -1,0 +1,10 @@
+
+Backend:
+  ☐ abstract sqlite3.Database into own class
+  ☐ make clear what relational schema to use in db
+  ☐ import data via convertToSqlite.js
+  ☐ create endpoints for the data
+Frontend:
+  ☐ get an idea what do display
+  ☐ use d3.js
+  ☐ style a bit

@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 (async () => {
     try {
         
-        const db = await connectToDB('database.sqlitee')
+        const db = await connectToDB('database.sqlite')
 
         app.get('/', (req, res) => {
             res.send('Hier kommt ne geile Seite hin')

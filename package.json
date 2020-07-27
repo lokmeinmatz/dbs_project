@@ -1,0 +1,23 @@
+{
+  "name": "dbs_project",
+  "version": "0.1.0",
+  "description": "corona visualisation for dbs course (FU berlin)",
+  "main": "convertToSqlite.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lokmeinmatz/dbs_project.git"
+  },
+  "author": "Matthias Kind, Justin Sudbrak, John Jung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lokmeinmatz/dbs_project/issues"
+  },
+  "homepage": "https://github.com/lokmeinmatz/dbs_project#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.0"
+  }
+}

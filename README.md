@@ -2,6 +2,14 @@
 
 by John Jung, Justin Sudbrak, Matthias Kind
 
+## how to run
+
+1. install [node](https://nodejs.org/en/)
+2. clone this repo (easiest via [GithubDesktop](https://desktop.github.com/)
+3. run `npm install` in the main folder
+4. run `node ./backend/main.js` to start the server
+5. go to http://localhost:3000/api/status to see if it's working
+
 ## Structure
 
 ### Backend

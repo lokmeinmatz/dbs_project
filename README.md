@@ -14,9 +14,23 @@ database : handles database requests. TODO: abstract sqlite3.Database fully away
 
 main : starts server and host static content (TODO)
 
+
+### Database
+
+primary keys are __bold__
+foreign keys are *italic*
+
+COUNTRY(__geoId__, name, population, continent)
+
+DAY_STATS(__date, *geoId*__, cases, deaths)
+
+        
 ## Sources
 
 ### Used
+
+- covid19.json from KVV
+  - removed "Other"-continent with this weird japan thing
 
 - bmi_2020.csv: [https://worldpopulationreview.com/country-rankings/most-obese-countries](https://worldpopulationreview.com/country-rankings/most-obese-countries)
 

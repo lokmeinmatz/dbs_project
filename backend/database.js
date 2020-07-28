@@ -18,5 +18,15 @@ async function connectToDB(file) {
     })
 };
 
+sqlite3.Database.prototype.allAsync = async function(sql, params) {
+    return new Promise(
+        (res, rej) => this.all(sql, params, (err, rows) => {
+            if (err) rej(err)
+            else res(rows)
+        })
+    )
+    
+}
+
 
 exports.connectToDB = connectToDB

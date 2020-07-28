@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBS Covid19 Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body onload="loaded()">
+    <div id="filter" style="display: flex;">
+        <label for="min_cases">Filter max cases per day above</label>
+        <input type="range" name="min_cases" id="min_cases" min="0" max="2000" value="0">
+        <p>0</p>
+    </div>
+</body>
+</html>

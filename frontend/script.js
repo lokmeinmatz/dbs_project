@@ -16,7 +16,6 @@ function displayDateChart(canvas, data) {
     return chart
 }
 
-let chart
 let allCovidData
 
 /**
@@ -40,10 +39,7 @@ function genLabels(from, to) {
 }
 
 async function loaded() {
-    const canv1 = document.createElement('canvas')
-    canv1.setAttribute('width', '500')
-    canv1.setAttribute('height', '300')
-    document.body.appendChild(canv1)
+    const canv1 = document.querySelector('#cases_per_day canvas')
 
     const res = await (await fetch('/api/corona/all-countries')).json()
     
@@ -74,7 +70,7 @@ async function loaded() {
             }
             //if (data[dataIndex].date < labels[labelIndex]) break
         }
-        console.log(finalData)
+        //console.log(finalData)
 
         return {
             label: e.name,
@@ -85,26 +81,71 @@ async function loaded() {
     allCovidData = adapted.filter(e => e.data.some(v => Number.isNaN(v)))
     ///console.log(adapted)
 
-    chart = displayDateChart(canv1, {
+    const newCasesChart = displayDateChart(canv1, {
         labels,
         datasets: adapted
     })
 
     const updateMinFilter = (v) => {
-        document.querySelector('#filter > p').textContent = v.target.value
+        document.querySelector('#cases_per_day #filter > p').textContent = v.target.value
     }
 
-    document.querySelector('#min_cases').addEventListener('input', updateMinFilter)
+    const new_cases_slider = document.querySelector('#cases_per_day #min_cases')
 
+    new_cases_slider.addEventListener('input', updateMinFilter)
 
-    document.querySelector('#min_cases').addEventListener('mouseup', v => {
+    new_cases_slider.addEventListener('mouseup', v => {
         console.log(v.target.value)
-        chart.data.datasets = allCovidData.filter(e => {
+        newCasesChart.data.datasets = allCovidData.filter(e => {
             return Math.max(0, ...e.data.filter(Number.isFinite)) > v.target.value
         })
-        chart.update()
+        newCasesChart.update()
         console.log('chart updated')
     })
+
+    const updateMinFilterWave = (v) => {
+        document.querySelector('#wave_start #filter > p').textContent = v.target.value
+    }
+
+    const wave_slider = document.querySelector('#wave_start #min_cases')
+    wave_slider.value = 50
+    wave_slider.addEventListener('input', updateMinFilterWave)
+
+    updateMinFilterWave({target: {value: 50}})
+
+    
+    const canv2 = document.querySelector('#wave_start canvas')
+    
+    
+    const waveChart = displayDateChart(canv2, {
+        labels: [],
+        datasets: []
+    })
+    const updateWaveChart = async () => {
+        const wavMin = wave_slider.value
+        console.log(wavMin)
+        const data = await (await fetch('/api/corona/by-wave-start?min=' + wavMin)).json()
+        console.log(data)
+        let len = 0
+        for (const c of data) {
+            len = Math.max(len, c.data.length)
+        }
+        let labels = []
+        for (let i = 0; i < len; i++) labels.push(i)
+
+        
+
+        waveChart.data.labels = labels
+        waveChart.data.datasets = data
+        waveChart.update()
+    }
+
+    wave_slider.addEventListener('mouseup', async v => {
+        await updateWaveChart()
+        console.log('chart updated')
+    })
+
+    await updateWaveChart()
 }
     
 

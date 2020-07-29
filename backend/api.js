@@ -1,7 +1,6 @@
 const { Database } = require("sqlite3"); // for typing
 const { application } = require('express')
 
-const JSON_MIME = 'application/json'
 
 
 
@@ -13,15 +12,13 @@ const JSON_MIME = 'application/json'
 function startAPI(expressApp, db) {
     console.log('registering api endpoints...')
     expressApp.get('/api/status', (req, res) => {
-        res.set('Content-Type', JSON_MIME)
-        res.send(JSON.stringify({
+        res.json({
             requestsServed: exports.requestsServed, // TODO count?,
             databaseConnected: db != null
-        }))
+        })
     })
 
     expressApp.get('/api/corona/all-countries', async (req, res) => {
-        res.set('Content-Type', JSON_MIME)
         const rows = await db.allAsync('SELECT * FROM day_stats JOIN country USING (geoId) ORDER BY geoId')
         let data = []
         for (const row of rows) {
@@ -58,11 +55,85 @@ function startAPI(expressApp, db) {
 
         // fill all unknown values?
 
-        res.send(JSON.stringify({
+        res.json({
             start: first,
             last,
             data
-        }))
+        })
+    })
+
+    expressApp.get('/api/corona/by-wave-start', async (req, res) => {
+        const rows = await db.allAsync('SELECT * FROM day_stats JOIN country USING (geoId) ORDER BY date')
+        let waveMin = 50
+
+        if (req.query.min && Number.isFinite(parseInt(req.query.min))) {
+            waveMin = parseInt(req.query.min)
+        }
+        console.log('getting req with waveMin ', waveMin)
+        
+
+        
+
+        let data = {}
+        for (const row of rows) {
+            //console.log(row.geoId)
+            let lastEntry = data[row.geoId]
+            if (lastEntry == undefined) {
+                lastEntry = {
+                    name: row.name,
+                    dayData: null
+                };
+                data[row.geoId] = lastEntry
+            }
+
+            if (lastEntry.dayData != null || row.cases >= waveMin) {
+                if (lastEntry.dayData == null) {
+                    lastEntry.dayData = [{
+                        date: new Date(row.date),
+                        cases: row.cases
+                    }]
+                    continue
+                }
+                const rowDate = new Date(row.date)
+                /**
+                 * @type {Date}
+                 */
+                let curr = lastEntry.dayData[lastEntry.dayData.length - 1].date
+                curr.setDate(curr.getDate() + 1)
+                while (curr < rowDate) {
+                    lastEntry.dayData.push({
+                        date: curr,
+                        cases: null
+                    })
+                    curr.setDate(curr.getDate() + 1)
+                }
+
+                lastEntry.dayData.push({
+                    date: new Date(row.date),
+                    cases: row.cases
+                })
+            }
+
+        }
+
+        let datasets = []
+        // fill all unknown values?
+        for (const id in data) {
+            //console.log('processing', id)
+            const field = data[id]
+
+            if (field.dayData != null) {
+                datasets.push({
+                    geoId: field.geoId,
+                    label: field.name,
+                    data: field.dayData.map(e => {
+                        return e.cases
+                    })
+                })
+            }
+            
+        }
+        res.json(datasets)
     })
     
     console.log('finished registering api endpoints...')

@@ -9,10 +9,23 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body onload="loaded()">
-    <div id="filter" style="display: flex;">
-        <label for="min_cases">Filter max cases per day above</label>
-        <input type="range" name="min_cases" id="min_cases" min="0" max="2000" value="0">
-        <p>0</p>
+    <div id="cases_per_day">
+        <h2>New Cases / day (all countries)</h2>
+        <div id="filter" style="display: flex;">
+            <label for="min_cases">Filter max cases per day above</label>
+            <input type="range" name="min_cases" id="min_cases" min="0" max="2000" value="0">
+            <p>0</p>
+        </div>
+        <canvas width="600" height="300"></canvas>
+    </div>
+    <div id="wave_start">
+        <h2>Cases / day from wave start (set min. limit below)</h2>
+        <div id="filter" style="display: flex;">
+            <label for="min_cases">Wave threshold (new cases below this will not trigger wave)</label>
+            <input type="range" name="min_cases" id="min_cases" min="10" max="500" value="50">
+            <p>0</p>
+        </div>
+        <canvas width="600" height="300"></canvas>
     </div>
 </body>
 </html>

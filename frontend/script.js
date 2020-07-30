@@ -119,6 +119,9 @@ async function loaded() {
 
     updateMinFilterWave({target: {value: 50}})
 
+    const waveModeHtml = document.querySelectorAll('#wave_start .form-radio input')
+
+
     
     const canv2 = document.querySelector('#wave_start canvas')
     
@@ -129,8 +132,9 @@ async function loaded() {
     })
     const updateWaveChart = async () => {
         const wavMin = wave_slider.value
-        console.log(wavMin)
-        const data = await (await fetch('/api/corona/by-wave-start?min=' + wavMin)).json()
+        const waveMode = document.querySelector('#wave_start .form-radio input:checked').value
+        console.log(wavMin, waveMode)
+        const data = await (await fetch(`/api/corona/by-wave-start?min=${wavMin}&mode=${waveMode}`)).json()
         console.log(data)
         let len = 0
         for (const c of data) {
@@ -150,6 +154,8 @@ async function loaded() {
         await updateWaveChart()
         console.log('chart updated')
     })
+
+    waveModeHtml.forEach(e => e.addEventListener('input', updateWaveChart))
 
     await updateWaveChart()
     /**

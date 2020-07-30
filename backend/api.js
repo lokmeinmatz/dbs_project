@@ -66,10 +66,15 @@ function startAPI(expressApp, db) {
         const rows = await db.allAsync('SELECT * FROM day_stats JOIN country USING (geoId) ORDER BY date')
         let waveMin = 50
 
+        
         if (req.query.min && Number.isFinite(parseInt(req.query.min))) {
             waveMin = parseInt(req.query.min)
         }
-        console.log('getting req with waveMin ', waveMin)
+        let waveMode = 'day'
+
+        if (req.query.mode) waveMode = req.query.mode
+
+        console.log('getting req with waveMin ', waveMin, ' waveMode', waveMode)
         
 
         
@@ -122,7 +127,7 @@ function startAPI(expressApp, db) {
             //console.log('processing', id)
             const field = data[id]
 
-            if (field.dayData != null) {
+            if (field.dayData != null && waveMode == 'day') {
                 datasets.push({
                     geoId: field.geoId,
                     label: field.name,
@@ -130,6 +135,26 @@ function startAPI(expressApp, db) {
                         return e.cases
                     })
                 })
+            }
+            else if (field.dayData != null && waveMode == 'week') {
+                let ddata = []
+                let lastSum = 0
+                for (let i = 0; i < field.dayData.length; i++) {
+                    if (i % 7 == 0) {
+                        ddata.push(lastSum / 7)
+                        lastSum = 0
+                    }
+
+                    lastSum += field.dayData[i].cases | 0
+                }
+
+
+                datasets.push({
+                    geoId: field.geoId,
+                    label: field.name,
+                    data: ddata
+                })
+                
             }
             
         }

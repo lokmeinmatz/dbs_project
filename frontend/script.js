@@ -86,22 +86,28 @@ async function loaded() {
         datasets: adapted
     })
 
-    const updateMinFilter = (v) => {
-        document.querySelector('#cases_per_day #filter > p').textContent = v.target.value
+    const new_cases_slider = document.querySelector('#cases_per_day #min_cases')
+    const updateMinFilter = () => {
+        document.querySelector('#cases_per_day #filter > p').textContent = new_cases_slider.value
     }
 
-    const new_cases_slider = document.querySelector('#cases_per_day #min_cases')
+    new_cases_slider.value = 1000
+
+    updateMinFilter()
+
 
     new_cases_slider.addEventListener('input', updateMinFilter)
 
     new_cases_slider.addEventListener('mouseup', v => {
-        console.log(v.target.value)
+        console.log(new_cases_slider.value)
         newCasesChart.data.datasets = allCovidData.filter(e => {
-            return Math.max(0, ...e.data.filter(Number.isFinite)) > v.target.value
+            return Math.max(0, ...e.data.filter(Number.isFinite)) > new_cases_slider.value
         })
         newCasesChart.update()
         console.log('chart updated')
     })
+
+    new_cases_slider.dispatchEvent(new Event('mouseup'))
 
     const updateMinFilterWave = (v) => {
         document.querySelector('#wave_start #filter > p').textContent = v.target.value
@@ -157,15 +163,35 @@ async function loaded() {
             datasets: []
         }
     })
+
+    /**
+     * @type {HTMLSelectElement}
+     */
+    const sortbyHtml = document.querySelector('#bar_cases #sort')
+
     const updateBarChart = async () => {
 
-        const data = await (await fetch('/api/corona/bmi-gdp-death-ratio')).json()
-        console.log(data)
+        console.log('update sort-by=' + sortbyHtml.value)
+        const data = await (await fetch('/api/corona/bmi-gdp-death-ratio?sort-by=' + sortbyHtml.value)).json()
+
+        for (const ds of data.datasets) {
+            ds.barPercentage = 1.0
+            ds.catergoryPercentage = 1.0
+        }
         
         barChart.data.labels = data.labels
         barChart.data.datasets = data.datasets
+
+        barChart.options.scales.yAxes = [
+            {id: 'cases'},
+            {id: 'deaths'},
+            {id: 'bmi'},
+            {id: 'gdp'}
+        ]
         barChart.update()
     }
+
+    sortbyHtml.addEventListener('input', updateBarChart)
 
     await updateBarChart()
 }

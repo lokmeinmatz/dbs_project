@@ -143,7 +143,12 @@ function startAPI(expressApp, db) {
         // * bmi
         // * gdp / person
         const rows = await db.allAsync('SELECT * FROM day_stats JOIN country USING (geoId)')
-        console.log('getting bar data')
+        let sortBy = 'cases'
+        if (req.query['sort-by']) sortBy = req.query['sort-by']
+        
+        console.log('getting bar data | sort by ' + sortBy)
+
+
         
         let data = {}
         for (const row of rows) {
@@ -155,7 +160,7 @@ function startAPI(expressApp, db) {
                     totalCases: 0,
                     totalDeaths: 0,
                     bmi: row.bmi,
-                    gdp: row.gdp
+                    gdp: row.gdp_per_person
                 };
                 data[row.geoId] = lastEntry
             }
@@ -169,11 +174,29 @@ function startAPI(expressApp, db) {
         const dbmi = []
         const dgdp = []
         const labels = []
+
+        let toSort = []
+
+        for (const id in data) {
+            toSort.push(data[id])
+        }
+
+        toSort.sort((a, b) => {
+            switch (sortBy) {
+                case 'bmi':
+                    return a.bmi - b.bmi
+                case 'deaths':
+                    return a.totalDeaths - b.totalDeaths
+                case 'gdp':
+                    return a.gdp - b.gdp
+                default:
+                    return a.totalCases - b.totalCases
+            }
+        })
         
         // fill all unknown values?
-        for (const id in data) {
-            //console.log('processing', id)
-            const field = data[id]
+        for (const field of toSort) {
+
 
             dCases.push(field.totalCases)
             dCasesPDeath.push(field.totalDeaths / field.totalCases)
@@ -185,10 +208,30 @@ function startAPI(expressApp, db) {
         res.json({
             labels,
             datasets: [
-                {label: 'Cases', data: dCases},
-                {label: 'Cases per Death', data: dCasesPDeath},
-                {label: 'BMI', data: dbmi},
-                {label: 'GDP', data: dgdp}
+                {
+                    label: 'Cases', 
+                    yAxisID: 'cases', 
+                    backgroundColor: 'rgba(255, 0, 0, 1)',
+                    data: dCases
+                },
+                {
+                    label: 'Deaths per Case', 
+                    yAxisID: 'deaths', 
+                    backgroundColor: 'rgba(0, 255, 0, 1)',
+                    data: dCasesPDeath
+                },
+                {
+                    label: 'BMI', 
+                    yAxisID: 'bmi', 
+                    backgroundColor: 'rgba(0, 0, 255, 1)',
+                    data: dbmi
+                },
+                {
+                    label: 'GDP', 
+                    yAxisID: 'gdp', 
+                    backgroundColor: 'rgba(200, 100, 0, 1)',
+                    data: dgdp
+                }
             ]
         })
     })

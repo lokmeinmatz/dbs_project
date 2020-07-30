@@ -146,6 +146,28 @@ async function loaded() {
     })
 
     await updateWaveChart()
+    /**
+     * @type {HTMLCanvasElement}
+     */
+    const canv3 = document.querySelector('#bar_cases > canvas')
+    const barChart = new Chart(canv3.getContext('2d'), {
+        type: 'bar',
+        data: {
+            labels: [],
+            datasets: []
+        }
+    })
+    const updateBarChart = async () => {
+
+        const data = await (await fetch('/api/corona/bmi-gdp-death-ratio')).json()
+        console.log(data)
+        
+        barChart.data.labels = data.labels
+        barChart.data.datasets = data.datasets
+        barChart.update()
+    }
+
+    await updateBarChart()
 }
     
 

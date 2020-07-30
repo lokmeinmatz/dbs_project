@@ -135,6 +135,63 @@ function startAPI(expressApp, db) {
         }
         res.json(datasets)
     })
+
+    expressApp.get('/api/corona/bmi-gdp-death-ratio', async (req, res) => {
+        // this displays a bar chart
+        // * total corona cases
+        // * deaths / case
+        // * bmi
+        // * gdp / person
+        const rows = await db.allAsync('SELECT * FROM day_stats JOIN country USING (geoId)')
+        console.log('getting bar data')
+        
+        let data = {}
+        for (const row of rows) {
+            //console.log(row.geoId)
+            let lastEntry = data[row.geoId]
+            if (lastEntry == undefined) {
+                lastEntry = {
+                    name: row.name,
+                    totalCases: 0,
+                    totalDeaths: 0,
+                    bmi: row.bmi,
+                    gdp: row.gdp
+                };
+                data[row.geoId] = lastEntry
+            }
+
+            lastEntry.totalCases += row.cases
+            lastEntry.totalDeaths += row.deaths
+        }
+
+        const dCases = []
+        const dCasesPDeath = []
+        const dbmi = []
+        const dgdp = []
+        const labels = []
+        
+        // fill all unknown values?
+        for (const id in data) {
+            //console.log('processing', id)
+            const field = data[id]
+
+            dCases.push(field.totalCases)
+            dCasesPDeath.push(field.totalDeaths / field.totalCases)
+            dbmi.push(field.bmi)
+            dgdp.push(field.gdp)
+            labels.push(field.name)
+
+        }
+        res.json({
+            labels,
+            datasets: [
+                {label: 'Cases', data: dCases},
+                {label: 'Cases per Death', data: dCasesPDeath},
+                {label: 'BMI', data: dbmi},
+                {label: 'GDP', data: dgdp}
+            ]
+        })
+    })
     
     console.log('finished registering api endpoints...')
 }

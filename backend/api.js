@@ -192,6 +192,7 @@ function startAPI(expressApp, db) {
                     name: row.name,
                     totalCases: 0,
                     totalDeaths: 0,
+                    population: row.population,
                     bmi: row.bmi,
                     gdp: row.gdp_per_person
                 };
@@ -212,6 +213,10 @@ function startAPI(expressApp, db) {
 
         for (const id in data) {
             toSort.push(data[id])
+
+            data[id].deathsPerCase = data[id].totalDeaths / data[id].totalCases
+            //console.log(data[id].deathsPerCase, data[id].totalDeaths, data[id].totalCases)
+            data[id].totalCases /= data[id].population
         }
 
         toSort.sort((a, b) => {
@@ -219,7 +224,7 @@ function startAPI(expressApp, db) {
                 case 'bmi':
                     return a.bmi - b.bmi
                 case 'deaths':
-                    return a.totalDeaths - b.totalDeaths
+                    return a.deathsPerCase - b.deathsPerCase
                 case 'gdp':
                     return a.gdp - b.gdp
                 default:
@@ -232,7 +237,7 @@ function startAPI(expressApp, db) {
 
 
             dCases.push(field.totalCases)
-            dCasesPDeath.push(field.totalDeaths / field.totalCases)
+            dCasesPDeath.push(field.deathsPerCase)
             dbmi.push(field.bmi)
             dgdp.push(field.gdp)
             labels.push(field.name)

@@ -195,7 +195,8 @@ async function loaded() {
             {id: 'cases'},
             {id: 'deaths'},
             {id: 'bmi'},
-            {id: 'gdp'}
+            {id: 'gdp'},
+            {id: 'avg_age'}
         ]
         barChart.update()
     }

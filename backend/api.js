@@ -194,6 +194,7 @@ function startAPI(expressApp, db) {
                     totalDeaths: 0,
                     population: row.population,
                     bmi: row.bmi,
+                    avg_age: row.avg_age,
                     gdp: row.gdp_per_person
                 };
                 data[row.geoId] = lastEntry
@@ -207,6 +208,7 @@ function startAPI(expressApp, db) {
         const dCasesPDeath = []
         const dbmi = []
         const dgdp = []
+        const davgAge = []
         const labels = []
 
         let toSort = []
@@ -227,6 +229,8 @@ function startAPI(expressApp, db) {
                     return a.deathsPerCase - b.deathsPerCase
                 case 'gdp':
                     return a.gdp - b.gdp
+                case 'avg_age':
+                    return a.avg_age - b.avg_age
                 default:
                     return a.totalCases - b.totalCases
             }
@@ -235,10 +239,10 @@ function startAPI(expressApp, db) {
         // fill all unknown values?
         for (const field of toSort) {
 
-
             dCases.push(field.totalCases)
             dCasesPDeath.push(field.deathsPerCase)
             dbmi.push(field.bmi)
+            davgAge.push(field.avg_age)
             dgdp.push(field.gdp)
             labels.push(field.name)
 
@@ -251,6 +255,12 @@ function startAPI(expressApp, db) {
                     yAxisID: 'cases', 
                     backgroundColor: 'rgba(255, 0, 0, 1)',
                     data: dCases
+                },
+                {
+                    label: 'Avg Age', 
+                    yAxisID: 'avg_age', 
+                    backgroundColor: 'rgba(255, 0, 200, 1)',
+                    data: davgAge
                 },
                 {
                     label: 'Deaths per Case', 

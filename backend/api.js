@@ -21,6 +21,10 @@ function startAPI(expressApp, db) {
     expressApp.get('/api/corona/all-countries', async (req, res) => {
         const rows = await db.allAsync('SELECT * FROM day_stats JOIN country USING (geoId) ORDER BY geoId')
         let data = []
+
+        
+        const relative = req.query.relative != undefined
+
         for (const row of rows) {
             let lastEntry = null
             if (data.length == 0 || data[data.length - 1].geoId != row.geoId) {
@@ -32,7 +36,7 @@ function startAPI(expressApp, db) {
                 data.push(lastEntry)
             } else { lastEntry = data[data.length - 1] }
 
-            lastEntry.dayData.push({date: row.date, cases: row.cases, deaths: row.deaths})
+            lastEntry.dayData.push({date: row.date, cases: relative ? row.cases * 1000000 / row.population : row.cases, deaths: row.deaths})
 
         }
 
@@ -72,6 +76,9 @@ function startAPI(expressApp, db) {
         }
         let waveMode = 'day'
 
+        const relative = req.query.relative != undefined
+
+        console.log(relative, req.query.relative)
         if (req.query.mode) waveMode = req.query.mode
 
         console.log('getting req with waveMin ', waveMin, ' waveMode', waveMode)
@@ -96,7 +103,7 @@ function startAPI(expressApp, db) {
                     //console.log(row.population)
                     lastEntry.dayData = [{
                         date: new Date(row.date),
-                        cases: row.cases * 10000 / row.population
+                        cases: relative ? (row.cases * 10000 / row.population) : row.cases
                     }]
                     continue
                 }
@@ -116,7 +123,7 @@ function startAPI(expressApp, db) {
 
                 lastEntry.dayData.push({
                     date: new Date(row.date),
-                    cases: row.cases * 10000 / row.population
+                    cases: relative ? (row.cases * 10000 / row.population) : row.cases
                 })
             }
 

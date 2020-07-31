@@ -121,7 +121,7 @@ async function loaded() {
 
     const waveModeHtml = document.querySelectorAll('#wave_start .form-radio input')
 
-
+    const relativeWaveHtml = document.querySelector('#relativeWave')
     
     const canv2 = document.querySelector('#wave_start canvas')
     
@@ -132,9 +132,12 @@ async function loaded() {
     })
     const updateWaveChart = async () => {
         const wavMin = wave_slider.value
+        const relative = relativeWaveHtml.checked
         const waveMode = document.querySelector('#wave_start .form-radio input:checked').value
         console.log(wavMin, waveMode)
-        const data = await (await fetch(`/api/corona/by-wave-start?min=${wavMin}&mode=${waveMode}`)).json()
+        const data = await (await fetch(
+            `/api/corona/by-wave-start?min=${wavMin}&mode=${waveMode}${relative ? '&relative' : ''}`
+        )).json()
         console.log(data)
         let len = 0
         for (const c of data) {
@@ -154,7 +157,7 @@ async function loaded() {
         await updateWaveChart()
         console.log('chart updated')
     })
-
+    relativeWaveHtml.addEventListener('input', updateWaveChart)
     waveModeHtml.forEach(e => e.addEventListener('input', updateWaveChart))
 
     await updateWaveChart()

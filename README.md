@@ -28,7 +28,7 @@ main : starts server and host static content (TODO)
 primary keys are __bold__
 foreign keys are *italic*
 
-COUNTRY(__geoId__, name, population, continent)
+COUNTRY(__geoId__, name, population, continent, bmi, gdp_per_person, avg_age)
 
 DAY_STATS(__date, *geoId*__, cases, deaths)
 
@@ -43,6 +43,8 @@ DAY_STATS(__date, *geoId*__, cases, deaths)
 - bmi_2020.csv: [https://worldpopulationreview.com/country-rankings/most-obese-countries](https://worldpopulationreview.com/country-rankings/most-obese-countries)
 
 - gdb.csv: [https://worldpopulationreview.com/countries/countries-by-gdp](https://worldpopulationreview.com/countries/countries-by-gdp)
+
+- daily.json / American cases per day [https://covidtracking.com/api/v1/us/daily.json](https://covidtracking.com/api/v1/us/daily.json)
 
 
 ### Could be used

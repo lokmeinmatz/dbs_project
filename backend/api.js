@@ -341,28 +341,30 @@ function startAPI(expressApp, db) {
         }
 
         // average of 5
-        dDeathsPerCase = dDeathsPerCase.reduce(([sum, count, arr], curr) => {
-            sum += curr
-            if (count == 5) {
-                arr.push(sum / 5)
-                sum = 0
-                count = -1
+        let averageDeathsPerCase = []
+        let lastAvg = 0
+        for (let i = 0; i < dDeathsPerCase.length; i++) {
+            lastAvg += dDeathsPerCase[i]
+            if (i % 5 == 0) {
+                averageDeathsPerCase.push(lastAvg / 5)
+                lastAvg = 0
             }
-            count++
-            return [sum, count, arr]
-        }, [0, 0, []])[2]
+        }
+        if (dDeathsPerCase.length % 5 != 0) averageDeathsPerCase.push(lastAvg / 5)
+
+        console.log(averageDeathsPerCase)
 
         // average of 5
-        davgAge = davgAge.reduce(([sum, count, arr], curr) => {
-            sum += curr
-            count++
-            if (count == 5) {
-                arr.push(sum / 5)
-                sum = 0
-                count = 0
+        let averageAge = []
+        lastAvg = 0
+        for (let i = 0; i < davgAge.length; i++) {
+            lastAvg += davgAge[i]
+            if (i % 5 == 0) {
+                averageAge.push(lastAvg / 5)
+                lastAvg = 0
             }
-            return [sum, count, arr]
-        }, [0, 0, []])[2]
+        }
+        if (dDeathsPerCase.length % 5 != 0) averageAge.push(lastAvg / 5)
         
 
         let nLabels = []
@@ -373,8 +375,8 @@ function startAPI(expressApp, db) {
 
 
         // sum, count
-        console.log(dDeathsPerCase)
-        console.log(nLabels)
+       // console.log(dDeathsPerCase)
+        //console.log(nLabels)
 
         res.json({
             labels: nLabels,
@@ -383,13 +385,13 @@ function startAPI(expressApp, db) {
                     label: 'Avg Age', 
                     yAxisID: 'avg_age', 
                     backgroundColor: 'rgba(255, 0, 200, 0.2)',
-                    data: davgAge
+                    data: averageAge
                 },
                 {
                     label: 'Deaths per Case', 
                     yAxisID: 'deaths', 
                     backgroundColor: 'rgba(0, 255, 0, 0.2)',
-                    data: dDeathsPerCase
+                    data: averageDeathsPerCase
                 }
             ]
         })

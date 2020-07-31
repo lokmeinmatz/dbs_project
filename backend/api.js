@@ -283,6 +283,117 @@ function startAPI(expressApp, db) {
             ]
         })
     })
+
+
+    expressApp.get('/api/corona/death-age', async (req, res) => {
+        // this displays a bar chart
+        // * total corona cases
+        // * deaths / case
+        // * bmi
+        // * gdp / person
+        const rows = await db.allAsync('SELECT * FROM day_stats JOIN country USING (geoId)')
+        
+        console.log('getting death-age')
+
+
+        
+        let data = {}
+        for (const row of rows) {
+            //console.log(row.geoId)
+            let lastEntry = data[row.geoId]
+            if (lastEntry == undefined) {
+                lastEntry = {
+                    name: row.name,
+                    totalCases: 0,
+                    totalDeaths: 0,
+                    avg_age: row.avg_age
+                };
+                data[row.geoId] = lastEntry
+            }
+
+            lastEntry.totalCases += row.cases
+            lastEntry.totalDeaths += row.deaths
+        }
+
+        let dDeathsPerCase = []
+        let  davgAge = []
+        let labels = []
+
+        let toSort = []
+
+        for (const id in data) {
+            toSort.push(data[id])
+
+            data[id].deathsPerCase = data[id].totalDeaths / data[id].totalCases
+        }
+
+        toSort.sort((a, b) => a.avg_age - b.avg_age)
+
+        toSort = toSort.filter(e => Number.isFinite(e.deathsPerCase) && Number.isFinite(e.avg_age))
+        
+        // fill all unknown values?
+        for (const field of toSort) {
+
+            dDeathsPerCase.push(field.deathsPerCase)
+            davgAge.push(field.avg_age)
+            labels.push(field.name)
+
+        }
+
+        // average of 5
+        dDeathsPerCase = dDeathsPerCase.reduce(([sum, count, arr], curr) => {
+            sum += curr
+            if (count == 5) {
+                arr.push(sum / 5)
+                sum = 0
+                count = -1
+            }
+            count++
+            return [sum, count, arr]
+        }, [0, 0, []])[2]
+
+        // average of 5
+        davgAge = davgAge.reduce(([sum, count, arr], curr) => {
+            sum += curr
+            count++
+            if (count == 5) {
+                arr.push(sum / 5)
+                sum = 0
+                count = 0
+            }
+            return [sum, count, arr]
+        }, [0, 0, []])[2]
+        
+
+        let nLabels = []
+
+        for(let i = 0; i < labels.length; i++) {
+            if (i % 5 == 0) nLabels.push(labels[i]) 
+        }
+
+
+        // sum, count
+        console.log(dDeathsPerCase)
+        console.log(nLabels)
+
+        res.json({
+            labels: nLabels,
+            datasets: [
+                {
+                    label: 'Avg Age', 
+                    yAxisID: 'avg_age', 
+                    backgroundColor: 'rgba(255, 0, 200, 0.2)',
+                    data: davgAge
+                },
+                {
+                    label: 'Deaths per Case', 
+                    yAxisID: 'deaths', 
+                    backgroundColor: 'rgba(0, 255, 0, 0.2)',
+                    data: dDeathsPerCase
+                }
+            ]
+        })
+    })
     
     console.log('finished registering api endpoints...')
 }

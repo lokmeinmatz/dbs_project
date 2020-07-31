@@ -204,6 +204,47 @@ async function loaded() {
     sortbyHtml.addEventListener('input', updateBarChart)
 
     await updateBarChart()
+    console.log('finished bar chart (3)')
+
+    /**
+     * @type {HTMLCanvasElement}
+     */
+    const canv4 = document.querySelector('#deaths_age > canvas')
+    const deathAge = new Chart(canv4.getContext('2d'), {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: []
+        }
+    })
+
+    /**
+     * @type {HTMLSelectElement}
+     */
+    
+    const updateDeathAgeChart = async () => {
+
+        const data = await (await fetch('/api/corona/death-age')).json()
+
+        for (const ds of data.datasets) {
+            ds.barPercentage = 1.0
+            ds.catergoryPercentage = 1.0
+        }
+        
+        deathAge.data.labels = data.labels
+        deathAge.data.datasets = data.datasets
+
+        deathAge.options.scales.yAxes = [
+            {id: 'deaths'},
+            {id: 'avg_age'}
+        ]
+        deathAge.update()
+    }
+
+    //sortbyHtml.addEventListener('input', updateBarChart)
+
+    await updateDeathAgeChart()
+
 }
     
 

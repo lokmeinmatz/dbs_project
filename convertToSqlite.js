@@ -14,7 +14,7 @@ Insert here how the json and csv data gets inserted into the sqlite file.
 (async () => {
     try {
 
-       await loadGDP()
+       await loadAverageAge()
 
     } catch (e) {
         console.error(e)
@@ -121,6 +121,38 @@ async function loadGDP() {
 
         gdp = parseFloat(gdp.replace(/"/g, ''))
         stmt.run([gdp, country], (r, e) => {
+            if (e) console.error(e)
+            //console.log(r)
+        })
+    }
+    
+    stmt.finalize()
+    db.exec('END TRANSACTION')
+}
+
+
+async function loadAverageAge() {
+    const db = await connectToDB('database.sqlite')
+    console.log('connected to db')
+
+ // load file
+    /**
+     * @type {string}
+     */
+    const f = JSON.parse(fs.readFileSync('./sources/avgAge.json', 'utf-8'))
+    //console.log(f)
+
+    // or ignore because geoId and name are unique
+    db.exec('BEGIN TRANSACTION')
+    //return
+    const stmt = db.prepare('UPDATE country SET avg_age = ? WHERE name = ? COLLATE NOCASE');
+    
+    for (const entry of f.data) {
+        const countryName = entry.country.replace(/\s/g, '_')
+        console.log(countryName)
+        const avgAge = parseFloat(entry.median)
+        console.log(avgAge)
+        stmt.run([avgAge, countryName], (r, e) => {
             if (e) console.error(e)
             //console.log(r)
         })

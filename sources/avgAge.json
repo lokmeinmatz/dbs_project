@@ -1,0 +1,1614 @@
+{
+  "data": [
+    {
+      "country": "Afghanistan",
+      "rank": "208",
+      "median": "18.9",
+      "male": "18.8",
+      "female": "18.9"
+    },
+    {
+      "country": "Albania",
+      "rank": "95",
+      "median": "32.9",
+      "male": "31.6",
+      "female": "34.3"
+    },
+    {
+      "country": "Algeria",
+      "rank": "136",
+      "median": "28.1",
+      "male": "27.8",
+      "female": "28.4"
+    },
+    {
+      "country": "American Samoa",
+      "rank": "122",
+      "median": "25.5",
+      "male": "25.1",
+      "female": "26.0"
+    },
+    {
+      "country": "Andorra",
+      "rank": "10",
+      "median": "44.3",
+      "male": "44.4",
+      "female": "44.1"
+    },
+    {
+      "country": "Angola",
+      "rank": "214",
+      "median": "15.9",
+      "male": "15.4",
+      "female": "16.3"
+    },
+    {
+      "country": "Anguilla",
+      "rank": "79",
+      "median": "34.8",
+      "male": "32.9",
+      "female": "36.7"
+    },
+    {
+      "country": "Antigua and Barbuda",
+      "rank": "102",
+      "median": "31.9",
+      "male": "30.0",
+      "female": "33.5"
+    },
+    {
+      "country": "Argentina",
+      "rank": "105",
+      "median": "31.7",
+      "male": "30.5",
+      "female": "32.9"
+    },
+    {
+      "country": "Armenia",
+      "rank": "80",
+      "median": "35.1",
+      "male": "33.3",
+      "female": "36.9"
+    },
+    {
+      "country": "Aruba",
+      "rank": "55",
+      "median": "39.3",
+      "male": "37.5",
+      "female": "41.1"
+    },
+    {
+      "country": "Australia",
+      "rank": "58",
+      "median": "38.7",
+      "male": "37.9",
+      "female": "39.5"
+    },
+    {
+      "country": "Austria",
+      "rank": "13",
+      "median": "44.0",
+      "male": "42.8",
+      "female": "45.1"
+    },
+    {
+      "country": "Azerbaijan",
+      "rank": "107",
+      "median": "31.3",
+      "male": "29.8",
+      "female": "33.0"
+    },
+    {
+      "country": "The Bahamas",
+      "rank": "100",
+      "median": "32.0",
+      "male": "30.9",
+      "female": "33.2"
+    },
+    {
+      "country": "Bahrain",
+      "rank": "99",
+      "median": "32.3",
+      "male": "33.8",
+      "female": "29.5"
+    },
+    {
+      "country": "Bangladesh",
+      "rank": "148",
+      "median": "26.7",
+      "male": "26.0",
+      "female": "27.3"
+    },
+    {
+      "country": "Barbados",
+      "rank": "59",
+      "median": "38.6",
+      "male": "37.5",
+      "female": "39.8"
+    },
+    {
+      "country": "Belarus",
+      "rank": "51",
+      "median": "40.0",
+      "male": "37.1",
+      "female": "43.1"
+    },
+    {
+      "country": "Belgium",
+      "rank": "39",
+      "median": "41.4",
+      "male": "40.2",
+      "female": "42.7"
+    },
+    {
+      "country": "Belize",
+      "rank": "177",
+      "median": "22.7",
+      "male": "22.5",
+      "female": "22.9"
+    },
+    {
+      "country": "Benin",
+      "rank": "216",
+      "median": "18.2",
+      "male": "17.9",
+      "female": "18.6"
+    },
+    {
+      "country": "Bermuda",
+      "rank": "17",
+      "median": "43.4",
+      "male": "41.5",
+      "female": "45.3"
+    },
+    {
+      "country": "Bhutan",
+      "rank": "144",
+      "median": "27.6",
+      "male": "28.2",
+      "female": "27.1"
+    },
+    {
+      "country": "Bolivia",
+      "rank": "162",
+      "median": "24.3",
+      "male": "23.6",
+      "female": "25.0"
+    },
+    {
+      "country": "Bosnia and Herzegovina",
+      "rank": "32",
+      "median": "42.1",
+      "male": "40.5",
+      "female": "43.5"
+    },
+    {
+      "country": "Botswana",
+      "rank": "170",
+      "median": "24.5",
+      "male": "23.5",
+      "female": "25.6"
+    },
+    {
+      "country": "Brazil",
+      "rank": "103",
+      "median": "32.6",
+      "male": "31.1",
+      "female": "32.8"
+    },
+    {
+      "country": "British Virgin Islands",
+      "rank": "72",
+      "median": "36.5",
+      "male": "36.3",
+      "female": "36.6"
+    },
+    {
+      "country": "Brunei",
+      "rank": "116",
+      "median": "30.2",
+      "male": "29.7",
+      "female": "30.7"
+    },
+    {
+      "country": "Bulgaria",
+      "rank": "21",
+      "median": "42.7",
+      "male": "40.9",
+      "female": "44.7"
+    },
+    {
+      "country": "Burkina Faso",
+      "rank": "221",
+      "median": "17.3",
+      "male": "17.1",
+      "female": "17.4"
+    },
+    {
+      "country": "Burma",
+      "rank": "128",
+      "median": "28.2",
+      "male": "27.4",
+      "female": "29.0"
+    },
+    {
+      "country": "Burundi",
+      "rank": "224",
+      "median": "17.0",
+      "male": "16.8",
+      "female": "17.3"
+    },
+    {
+      "country": "Cabo Verde",
+      "rank": "156",
+      "median": "25.4",
+      "male": "24.6",
+      "female": "26.2"
+    },
+    {
+      "country": "Cambodia",
+      "rank": "157",
+      "median": "25.3",
+      "male": "24.6",
+      "female": "26.0"
+    },
+    {
+      "country": "Cameroon",
+      "rank": "210",
+      "median": "18.5",
+      "male": "18.4",
+      "female": "18.7"
+    },
+    {
+      "country": "Canada",
+      "rank": "29",
+      "median": "42.2",
+      "male": "40.9",
+      "female": "43.5"
+    },
+    {
+      "country": "Cayman Islands",
+      "rank": "52",
+      "median": "40.0",
+      "male": "39.3",
+      "female": "40.7"
+    },
+    {
+      "country": "Central African Republic",
+      "rank": "195",
+      "median": "19.7",
+      "male": "19.4",
+      "female": "20.0"
+    },
+    {
+      "country": "Chad",
+      "rank": "219",
+      "median": "17.8",
+      "male": "16.8",
+      "female": "18.8"
+    },
+    {
+      "country": "Chile",
+      "rank": "85",
+      "median": "34.4",
+      "male": "33.2",
+      "female": "35.6"
+    },
+    {
+      "country": "China",
+      "rank": "67",
+      "median": "37.4",
+      "male": "36.5",
+      "female": "38.4"
+    },
+    {
+      "country": "Colombia",
+      "rank": "120",
+      "median": "30.0",
+      "male": "29.0",
+      "female": "31.0"
+    },
+    {
+      "country": "Comoros",
+      "rank": "196",
+      "median": "19.9",
+      "male": "19.2",
+      "female": "20.5"
+    },
+    {
+      "country": "Democratic Republic of the Congo",
+      "rank": "211",
+      "median": "18.6",
+      "male": "18.3",
+      "female": "18.8"
+    },
+    {
+      "country": "Republic of the Congo",
+      "rank": "193",
+      "median": "19.7",
+      "male": "19.5",
+      "female": "19.8"
+    },
+    {
+      "country": "Cook Islands",
+      "rank": "74",
+      "median": "36.5",
+      "male": "36.0",
+      "female": "37.0"
+    },
+    {
+      "country": "Costa Rica",
+      "rank": "108",
+      "median": "31.3",
+      "male": "30.8",
+      "female": "31.8"
+    },
+    {
+      "country": "Cote d'Ivoire",
+      "rank": "187",
+      "median": "20.9",
+      "male": "21.0",
+      "female": "20.9"
+    },
+    {
+      "country": "Croatia",
+      "rank": "19",
+      "median": "43.0",
+      "male": "41.1",
+      "female": "45.0"
+    },
+    {
+      "country": "Cuba",
+      "rank": "37",
+      "median": "41.5",
+      "male": "40.1",
+      "female": "42.6"
+    },
+    {
+      "country": "Curacao",
+      "rank": "73",
+      "median": "36.1",
+      "male": "33.5",
+      "female": "39.7"
+    },
+    {
+      "country": "Cyprus",
+      "rank": "68",
+      "median": "36.8",
+      "male": "35.5",
+      "female": "38.3"
+    },
+    {
+      "country": "Czech Republic",
+      "rank": "33",
+      "median": "42.1",
+      "male": "40.8",
+      "female": "43.4"
+    },
+    {
+      "country": "Denmark",
+      "rank": "30",
+      "median": "42.2",
+      "male": "41.2",
+      "female": "43.2"
+    },
+    {
+      "country": "Djibouti",
+      "rank": "167",
+      "median": "23.9",
+      "male": "22.1",
+      "female": "25.3"
+    },
+    {
+      "country": "Dominica",
+      "rank": "89",
+      "median": "33.5",
+      "male": "33.0",
+      "female": "34.0"
+    },
+    {
+      "country": "Dominican Republic",
+      "rank": "137",
+      "median": "28.1",
+      "male": "27.9",
+      "female": "28.3"
+    },
+    {
+      "country": "Ecuador",
+      "rank": "143",
+      "median": "27.7",
+      "male": "27.0",
+      "female": "28.4"
+    },
+    {
+      "country": "Egypt",
+      "rank": "165",
+      "median": "23.9",
+      "male": "23.6",
+      "female": "24.2"
+    },
+    {
+      "country": "El Salvador",
+      "rank": "147",
+      "median": "27.1",
+      "male": "25.6",
+      "female": "28.6"
+    },
+    {
+      "country": "Equatorial Guinea",
+      "rank": "197",
+      "median": "19.8",
+      "male": "19.3",
+      "female": "20.3"
+    },
+    {
+      "country": "Eritrea",
+      "rank": "201",
+      "median": "19.7",
+      "male": "19.2",
+      "female": "20.1"
+    },
+    {
+      "country": "Estonia",
+      "rank": "22",
+      "median": "42.7",
+      "male": "39.4",
+      "female": "46.1"
+    },
+    {
+      "country": "Eswatini (Swaziland)",
+      "rank": "182",
+      "median": "21.7",
+      "male": "21.5",
+      "female": "21.9"
+    },
+    {
+      "country": "Ethiopia",
+      "rank": "218",
+      "median": "17.9",
+      "male": "17.7",
+      "female": "18.1"
+    },
+    {
+      "country": "EU",
+      "rank": "20",
+      "median": "42.9",
+      "male": "41.5",
+      "female": "44.3"
+    },
+    {
+      "country": "Faroe Islands",
+      "rank": "64",
+      "median": "37.6",
+      "male": "37.1",
+      "female": "38.3"
+    },
+    {
+      "country": "Fiji",
+      "rank": "129",
+      "median": "28.9",
+      "male": "28.7",
+      "female": "29.1"
+    },
+    {
+      "country": "Finland",
+      "rank": "26",
+      "median": "42.5",
+      "male": "40.9",
+      "female": "44.3"
+    },
+    {
+      "country": "France",
+      "rank": "40",
+      "median": "41.4",
+      "male": "39.6",
+      "female": "43.1"
+    },
+    {
+      "country": "French Polynesia",
+      "rank": "106",
+      "median": "31.9",
+      "male": "31.7",
+      "female": "32.1"
+    },
+    {
+      "country": "Gabon",
+      "rank": "209",
+      "median": "18.6",
+      "male": "18.4",
+      "female": "18.8"
+    },
+    {
+      "country": "The Gambia",
+      "rank": "188",
+      "median": "21.0",
+      "male": "20.7",
+      "female": "21.3"
+    },
+    {
+      "country": "Palestine",
+      "rank": "225",
+      "median": "17.2",
+      "male": "16.8",
+      "female": "17.5"
+    },
+    {
+      "country": "Georgia",
+      "rank": "60",
+      "median": "38.1",
+      "male": "35.3",
+      "female": "40.9"
+    },
+    {
+      "country": "Germany",
+      "rank": "3",
+      "median": "47.1",
+      "male": "46.0",
+      "female": "48.2"
+    },
+    {
+      "country": "Ghana",
+      "rank": "184",
+      "median": "21.1",
+      "male": "20.6",
+      "female": "21.6"
+    },
+    {
+      "country": "Gibraltar",
+      "rank": "81",
+      "median": "34.7",
+      "male": "33.8",
+      "female": "35.7"
+    },
+    {
+      "country": "Greece",
+      "rank": "6",
+      "median": "44.5",
+      "male": "43.5",
+      "female": "45.6"
+    },
+    {
+      "country": "Greenland",
+      "rank": "86",
+      "median": "33.9",
+      "male": "35.0",
+      "female": "32.7"
+    },
+    {
+      "country": "Grenada",
+      "rank": "109",
+      "median": "31.5",
+      "male": "31.5",
+      "female": "31.6"
+    },
+    {
+      "country": "Guam",
+      "rank": "111",
+      "median": "29.0",
+      "male": "28.3",
+      "female": "29.7"
+    },
+    {
+      "country": "Guatemala",
+      "rank": "180",
+      "median": "22.1",
+      "male": "21.4",
+      "female": "22.8"
+    },
+    {
+      "country": "Guernsey",
+      "rank": "14",
+      "median": "43.8",
+      "male": "42.5",
+      "female": "45.1"
+    },
+    {
+      "country": "Guinea-Bissau",
+      "rank": "191",
+      "median": "20.1",
+      "male": "19.7",
+      "female": "20.6"
+    },
+    {
+      "country": "Guinea",
+      "rank": "205",
+      "median": "18.9",
+      "male": "18.7",
+      "female": "19.1"
+    },
+    {
+      "country": "Guyana",
+      "rank": "151",
+      "median": "26.2",
+      "male": "25.9",
+      "female": "26.6"
+    },
+    {
+      "country": "Haiti",
+      "rank": "174",
+      "median": "23.0",
+      "male": "22.7",
+      "female": "23.2"
+    },
+    {
+      "country": "Honduras",
+      "rank": "175",
+      "median": "23.0",
+      "male": "22.6",
+      "female": "23.3"
+    },
+    {
+      "country": "Hong Kong",
+      "rank": "8",
+      "median": "44.4",
+      "male": "43.5",
+      "female": "45.0"
+    },
+    {
+      "country": "Hungary",
+      "rank": "28",
+      "median": "42.3",
+      "male": "40.4",
+      "female": "44.3"
+    },
+    {
+      "country": "Iceland",
+      "rank": "70",
+      "median": "36.5",
+      "male": "35.9",
+      "female": "37.1"
+    },
+    {
+      "country": "India",
+      "rank": "141",
+      "median": "28.1",
+      "male": "27.2",
+      "female": "28.6"
+    },
+    {
+      "country": "Indonesia",
+      "rank": "117",
+      "median": "30.2",
+      "male": "29.6",
+      "female": "30.8"
+    },
+    {
+      "country": "Iran",
+      "rank": "123",
+      "median": "30.3",
+      "male": "30.0",
+      "female": "30.5"
+    },
+    {
+      "country": "Iraq",
+      "rank": "192",
+      "median": "20.0",
+      "male": "19.8",
+      "female": "20.3"
+    },
+    {
+      "country": "Ireland",
+      "rank": "69",
+      "median": "36.8",
+      "male": "36.4",
+      "female": "37.1"
+    },
+    {
+      "country": "Isle of Man",
+      "rank": "11",
+      "median": "44.2",
+      "male": "43.3",
+      "female": "44.9"
+    },
+    {
+      "country": "Israel",
+      "rank": "119",
+      "median": "29.9",
+      "male": "29.3",
+      "female": "30.6"
+    },
+    {
+      "country": "Italy",
+      "rank": "5",
+      "median": "45.5",
+      "male": "44.4",
+      "female": "46.5"
+    },
+    {
+      "country": "Jamaica",
+      "rank": "152",
+      "median": "26.0",
+      "male": "25.5",
+      "female": "26.5"
+    },
+    {
+      "country": "Japan",
+      "rank": "2",
+      "median": "47.3",
+      "male": "46.0",
+      "female": "48.7"
+    },
+    {
+      "country": "Jersey",
+      "rank": "62",
+      "median": "38.0",
+      "male": "36.3",
+      "female": "40.7"
+    },
+    {
+      "country": "Jordan",
+      "rank": "178",
+      "median": "22.5",
+      "male": "22.9",
+      "female": "22.0"
+    },
+    {
+      "country": "Kazakhstan",
+      "rank": "112",
+      "median": "30.6",
+      "male": "29.3",
+      "female": "31.9"
+    },
+    {
+      "country": "Kenya",
+      "rank": "199",
+      "median": "19.7",
+      "male": "19.6",
+      "female": "19.9"
+    },
+    {
+      "country": "Kiribati",
+      "rank": "159",
+      "median": "24.6",
+      "male": "23.8",
+      "female": "25.5"
+    },
+    {
+      "country": "North Korea",
+      "rank": "87",
+      "median": "34.0",
+      "male": "32.5",
+      "female": "35.6"
+    },
+    {
+      "country": "South Korea",
+      "rank": "36",
+      "median": "41.8",
+      "male": "40.2",
+      "female": "43.4"
+    },
+    {
+      "country": "Kosovo",
+      "rank": "127",
+      "median": "29.1",
+      "male": "28.8",
+      "female": "29.5"
+    },
+    {
+      "country": "Kuwait",
+      "rank": "124",
+      "median": "29.3",
+      "male": "30.4",
+      "female": "27.4"
+    },
+    {
+      "country": "Kyrgyzstan",
+      "rank": "149",
+      "median": "26.5",
+      "male": "25.4",
+      "female": "27.6"
+    },
+    {
+      "country": "Laos",
+      "rank": "172",
+      "median": "23.0",
+      "male": "22.7",
+      "female": "23.3"
+    },
+    {
+      "country": "Latvia",
+      "rank": "16",
+      "median": "43.6",
+      "male": "39.7",
+      "female": "46.9"
+    },
+    {
+      "country": "Lebanon",
+      "rank": "118",
+      "median": "30.5",
+      "male": "29.9",
+      "female": "31.1"
+    },
+    {
+      "country": "Lesotho",
+      "rank": "163",
+      "median": "24.2",
+      "male": "24.2",
+      "female": "24.2"
+    },
+    {
+      "country": "Liberia",
+      "rank": "212",
+      "median": "17.8",
+      "male": "17.5",
+      "female": "18.0"
+    },
+    {
+      "country": "Libya",
+      "rank": "130",
+      "median": "28.9",
+      "male": "29.1",
+      "female": "28.7"
+    },
+    {
+      "country": "Liechtenstein",
+      "rank": "18",
+      "median": "43.2",
+      "male": "41.7",
+      "female": "44.5"
+    },
+    {
+      "country": "Lithuania",
+      "rank": "15",
+      "median": "43.7",
+      "male": "39.7",
+      "female": "47.1"
+    },
+    {
+      "country": "Luxembourg",
+      "rank": "54",
+      "median": "39.3",
+      "male": "38.7",
+      "female": "39.9"
+    },
+    {
+      "country": "Macau",
+      "rank": "56",
+      "median": "39.3",
+      "male": "39.5",
+      "female": "39.1"
+    },
+    {
+      "country": "North Macedonia",
+      "rank": "65",
+      "median": "37.9",
+      "male": "36.8",
+      "female": "39.0"
+    },
+    {
+      "country": "Madagascar",
+      "rank": "200",
+      "median": "19.7",
+      "male": "19.5",
+      "female": "19.9"
+    },
+    {
+      "country": "Malawi",
+      "rank": "227",
+      "median": "16.5",
+      "male": "16.4",
+      "female": "16.7"
+    },
+    {
+      "country": "Malaysia",
+      "rank": "131",
+      "median": "28.5",
+      "male": "28.2",
+      "female": "28.8"
+    },
+    {
+      "country": "Maldives",
+      "rank": "138",
+      "median": "28.2",
+      "male": "28.1",
+      "female": "28.3"
+    },
+    {
+      "country": "Mali",
+      "rank": "228",
+      "median": "15.8",
+      "male": "15.1",
+      "female": "16.4"
+    },
+    {
+      "country": "Malta",
+      "rank": "35",
+      "median": "41.8",
+      "male": "40.8",
+      "female": "43.0"
+    },
+    {
+      "country": "Marshall Islands",
+      "rank": "173",
+      "median": "22.9",
+      "male": "22.8",
+      "female": "23.0"
+    },
+    {
+      "country": "Mauritania",
+      "rank": "190",
+      "median": "20.5",
+      "male": "19.5",
+      "female": "21.4"
+    },
+    {
+      "country": "Mauritius",
+      "rank": "77",
+      "median": "35.3",
+      "male": "34.2",
+      "female": "36.3"
+    },
+    {
+      "country": "Mexico",
+      "rank": "133",
+      "median": "28.3",
+      "male": "27.2",
+      "female": "29.4"
+    },
+    {
+      "country": "Federated States of Micronesia",
+      "rank": "158",
+      "median": "25.1",
+      "male": "24.4",
+      "female": "25.8"
+    },
+    {
+      "country": "Moldova",
+      "rank": "71",
+      "median": "36.7",
+      "male": "34.9",
+      "female": "38.6"
+    },
+    {
+      "country": "Monaco",
+      "rank": "1",
+      "median": "53.1",
+      "male": "51.7",
+      "female": "54.5"
+    },
+    {
+      "country": "Mongolia",
+      "rank": "135",
+      "median": "28.3",
+      "male": "27.5",
+      "female": "29.2"
+    },
+    {
+      "country": "Montenegro",
+      "rank": "45",
+      "median": "40.7",
+      "male": "39.9",
+      "female": "41.8"
+    },
+    {
+      "country": "Montserrat",
+      "rank": "94",
+      "median": "33.2",
+      "male": "32.6",
+      "female": "33.7"
+    },
+    {
+      "country": "Morocco",
+      "rank": "125",
+      "median": "29.3",
+      "male": "28.6",
+      "female": "29.9"
+    },
+    {
+      "country": "Mozambique",
+      "rank": "222",
+      "median": "17.2",
+      "male": "16.6",
+      "female": "17.8"
+    },
+    {
+      "country": "Namibia",
+      "rank": "185",
+      "median": "21.2",
+      "male": "20.4",
+      "female": "21.9"
+    },
+    {
+      "country": "Nauru",
+      "rank": "150",
+      "median": "26.4",
+      "male": "27.0",
+      "female": "25.7"
+    },
+    {
+      "country": "Nepal",
+      "rank": "166",
+      "median": "24.1",
+      "male": "22.8",
+      "female": "25.3"
+    },
+    {
+      "country": "Netherlands",
+      "rank": "24",
+      "median": "42.6",
+      "male": "41.5",
+      "female": "43.6"
+    },
+    {
+      "country": "New Caledonia",
+      "rank": "101",
+      "median": "32.0",
+      "male": "31.3",
+      "female": "32.7"
+    },
+    {
+      "country": "New Zealand",
+      "rank": "63",
+      "median": "37.9",
+      "male": "37.1",
+      "female": "38.8"
+    },
+    {
+      "country": "Nicaragua",
+      "rank": "154",
+      "median": "25.7",
+      "male": "24.8",
+      "female": "26.6"
+    },
+    {
+      "country": "Nigeria",
+      "rank": "213",
+      "median": "18.4",
+      "male": "18.3",
+      "female": "18.5"
+    },
+    {
+      "country": "Niger",
+      "rank": "230",
+      "median": "15.4",
+      "male": "15.3",
+      "female": "15.5"
+    },
+    {
+      "country": "Northern Mariana Islands",
+      "rank": "93",
+      "median": "33.6",
+      "male": "32.8",
+      "female": "34.4"
+    },
+    {
+      "country": "Norway",
+      "rank": "57",
+      "median": "39.2",
+      "male": "38.4",
+      "female": "40.0"
+    },
+    {
+      "country": "Oman",
+      "rank": "153",
+      "median": "25.6",
+      "male": "26.6",
+      "female": "24.2"
+    },
+    {
+      "country": "Pakistan",
+      "rank": "168",
+      "median": "23.8",
+      "male": "23.7",
+      "female": "23.8"
+    },
+    {
+      "country": "Palau",
+      "rank": "88",
+      "median": "33.4",
+      "male": "32.7",
+      "female": "35.0"
+    },
+    {
+      "country": "Panama",
+      "rank": "126",
+      "median": "29.2",
+      "male": "28.8",
+      "female": "29.6"
+    },
+    {
+      "country": "Papua New Guinea",
+      "rank": "171",
+      "median": "23.1",
+      "male": "23.2",
+      "female": "23.1"
+    },
+    {
+      "country": "Paraguay",
+      "rank": "139",
+      "median": "28.2",
+      "male": "28.0",
+      "female": "28.5"
+    },
+    {
+      "country": "Peru",
+      "rank": "140",
+      "median": "28.0",
+      "male": "27.2",
+      "female": "28.8"
+    },
+    {
+      "country": "Philippines",
+      "rank": "169",
+      "median": "23.5",
+      "male": "23.1",
+      "female": "24.0"
+    },
+    {
+      "country": "Poland",
+      "rank": "46",
+      "median": "40.7",
+      "male": "39.0",
+      "female": "42.4"
+    },
+    {
+      "country": "Portugal",
+      "rank": "31",
+      "median": "42.2",
+      "male": "40.2",
+      "female": "44.4"
+    },
+    {
+      "country": "Puerto Rico",
+      "rank": "38",
+      "median": "41.5",
+      "male": "39.5",
+      "female": "43.2"
+    },
+    {
+      "country": "Qatar",
+      "rank": "90",
+      "median": "33.2",
+      "male": "34.3",
+      "female": "28.1"
+    },
+    {
+      "country": "Romania",
+      "rank": "42",
+      "median": "41.1",
+      "male": "39.7",
+      "female": "42.6"
+    },
+    {
+      "country": "Russia",
+      "rank": "53",
+      "median": "39.6",
+      "male": "36.6",
+      "female": "42.5"
+    },
+    {
+      "country": "Rwanda",
+      "rank": "203",
+      "median": "19.0",
+      "male": "18.3",
+      "female": "19.8"
+    },
+    {
+      "country": "Saint Barthelemy",
+      "rank": "12",
+      "median": "44.1",
+      "male": "44.1",
+      "female": "44.2"
+    },
+    {
+      "country": "Saint Helena, Ascension, and Tristan da Cunha",
+      "rank": "34",
+      "median": "41.9",
+      "male": "42.0",
+      "female": "41.9"
+    },
+    {
+      "country": "Saint Kitts and Nevis",
+      "rank": "82",
+      "median": "35.0",
+      "male": "35.2",
+      "female": "34.8"
+    },
+    {
+      "country": "Saint Lucia",
+      "rank": "84",
+      "median": "34.8",
+      "male": "33.7",
+      "female": "36.0"
+    },
+    {
+      "country": "Saint Martin",
+      "rank": "98",
+      "median": "32.5",
+      "male": "31.6",
+      "female": "33.4"
+    },
+    {
+      "country": "Saint Pierre and Miquelon",
+      "rank": "4",
+      "median": "46.5",
+      "male": "46.0",
+      "female": "47.0"
+    },
+    {
+      "country": "Saint Vincent and the Grenadines",
+      "rank": "91",
+      "median": "33.6",
+      "male": "33.8",
+      "female": "33.4"
+    },
+    {
+      "country": "Samoa",
+      "rank": "164",
+      "median": "24.4",
+      "male": "24.1",
+      "female": "24.6"
+    },
+    {
+      "country": "San Marino",
+      "rank": "9",
+      "median": "44.4",
+      "male": "43.3",
+      "female": "45.4"
+    },
+    {
+      "country": "Sao Tome and Principe",
+      "rank": "215",
+      "median": "18.4",
+      "male": "18.0",
+      "female": "18.8"
+    },
+    {
+      "country": "Saudi Arabia",
+      "rank": "145",
+      "median": "27.5",
+      "male": "28.2",
+      "female": "26.7"
+    },
+    {
+      "country": "Senegal",
+      "rank": "207",
+      "median": "18.8",
+      "male": "18.0",
+      "female": "19.7"
+    },
+    {
+      "country": "Serbia",
+      "rank": "25",
+      "median": "42.6",
+      "male": "40.9",
+      "female": "44.3"
+    },
+    {
+      "country": "Seychelles",
+      "rank": "76",
+      "median": "35.4",
+      "male": "34.9",
+      "female": "36.0"
+    },
+    {
+      "country": "Sierra Leone",
+      "rank": "204",
+      "median": "19.0",
+      "male": "18.4",
+      "female": "19.6"
+    },
+    {
+      "country": "Singapore",
+      "rank": "83",
+      "median": "34.6",
+      "male": "34.5",
+      "female": "34.7"
+    },
+    {
+      "country": "Sint Maarten",
+      "rank": "43",
+      "median": "41.0",
+      "male": "39.9",
+      "female": "42.0"
+    },
+    {
+      "country": "Slovakia",
+      "rank": "49",
+      "median": "40.5",
+      "male": "38.8",
+      "female": "42.3"
+    },
+    {
+      "country": "Slovenia",
+      "rank": "7",
+      "median": "44.5",
+      "male": "42.8",
+      "female": "46.2"
+    },
+    {
+      "country": "Solomon Islands",
+      "rank": "179",
+      "median": "22.5",
+      "male": "22.3",
+      "female": "22.8"
+    },
+    {
+      "country": "Somalia",
+      "rank": "217",
+      "median": "18.1",
+      "male": "18.3",
+      "female": "17.9"
+    },
+    {
+      "country": "South Africa",
+      "rank": "146",
+      "median": "27.1",
+      "male": "26.9",
+      "female": "27.3"
+    },
+    {
+      "country": "South Sudan",
+      "rank": "223",
+      "median": "17.3",
+      "male": "17.2",
+      "female": "17.5"
+    },
+    {
+      "country": "Spain",
+      "rank": "23",
+      "median": "42.7",
+      "male": "41.5",
+      "female": "43.9"
+    },
+    {
+      "country": "Sri Lanka",
+      "rank": "96",
+      "median": "32.8",
+      "male": "31.5",
+      "female": "34.0"
+    },
+    {
+      "country": "Sudan",
+      "rank": "198",
+      "median": "19.9",
+      "male": "19.7",
+      "female": "20.1"
+    },
+    {
+      "country": "Suriname",
+      "rank": "121",
+      "median": "29.8",
+      "male": "29.4",
+      "female": "30.2"
+    },
+    {
+      "country": "Sweden",
+      "rank": "41",
+      "median": "41.2",
+      "male": "40.2",
+      "female": "42.2"
+    },
+    {
+      "country": "Switzerland",
+      "rank": "27",
+      "median": "42.4",
+      "male": "41.4",
+      "female": "43.4"
+    },
+    {
+      "country": "Syria",
+      "rank": "161",
+      "median": "24.3",
+      "male": "23.9",
+      "female": "24.8"
+    },
+    {
+      "country": "Taiwan",
+      "rank": "47",
+      "median": "40.7",
+      "male": "40.0",
+      "female": "41.5"
+    },
+    {
+      "country": "Tajikistan",
+      "rank": "160",
+      "median": "24.5",
+      "male": "23.9",
+      "female": "25.1"
+    },
+    {
+      "country": "Tanzania",
+      "rank": "220",
+      "median": "17.7",
+      "male": "17.5",
+      "female": "18.0"
+    },
+    {
+      "country": "Thailand",
+      "rank": "66",
+      "median": "37.7",
+      "male": "36.6",
+      "female": "38.7"
+    },
+    {
+      "country": "East Timor",
+      "rank": "206",
+      "median": "18.9",
+      "male": "18.3",
+      "female": "19.6"
+    },
+    {
+      "country": "Togo",
+      "rank": "194",
+      "median": "19.8",
+      "male": "19.5",
+      "female": "20.1"
+    },
+    {
+      "country": "Tonga",
+      "rank": "176",
+      "median": "23.0",
+      "male": "22.5",
+      "female": "23.4"
+    },
+    {
+      "country": "Trinidad and Tobago",
+      "rank": "75",
+      "median": "36.0",
+      "male": "35.6",
+      "female": "36.6"
+    },
+    {
+      "country": "Tunisia",
+      "rank": "97",
+      "median": "31.6",
+      "male": "31.0",
+      "female": "32.2"
+    },
+    {
+      "country": "Turkey",
+      "rank": "110",
+      "median": "30.9",
+      "male": "30.5",
+      "female": "31.4"
+    },
+    {
+      "country": "Turkmenistan",
+      "rank": "142",
+      "median": "27.9",
+      "male": "27.5",
+      "female": "28.4"
+    },
+    {
+      "country": "Turks and Caicos Islands",
+      "rank": "92",
+      "median": "33.3",
+      "male": "33.6",
+      "female": "33.0"
+    },
+    {
+      "country": "Tuvalu",
+      "rank": "155",
+      "median": "25.7",
+      "male": "24.7",
+      "female": "26.9"
+    },
+    {
+      "country": "Uganda",
+      "rank": "229",
+      "median": "15.8",
+      "male": "15.7",
+      "female": "15.9"
+    },
+    {
+      "country": "Ukraine",
+      "rank": "48",
+      "median": "40.6",
+      "male": "37.4",
+      "female": "43.7"
+    },
+    {
+      "country": "United Arab Emirates",
+      "rank": "113",
+      "median": "30.3",
+      "male": "32.1",
+      "female": "25.0"
+    },
+    {
+      "country": "United Kingdom",
+      "rank": "50",
+      "median": "40.5",
+      "male": "39.3",
+      "female": "41.7"
+    },
+    {
+      "country": "United States",
+      "rank": "61",
+      "median": "38.1",
+      "male": "36.8",
+      "female": "39.4"
+    },
+    {
+      "country": "Uruguay",
+      "rank": "78",
+      "median": "35.0",
+      "male": "33.1",
+      "female": "36.7"
+    },
+    {
+      "country": "Uzbekistan",
+      "rank": "132",
+      "median": "28.6",
+      "male": "28.0",
+      "female": "29.2"
+    },
+    {
+      "country": "Vanuatu",
+      "rank": "181",
+      "median": "22.0",
+      "male": "21.6",
+      "female": "22.4"
+    },
+    {
+      "country": "Venezuela",
+      "rank": "134",
+      "median": "28.3",
+      "male": "27.6",
+      "female": "29.0"
+    },
+    {
+      "country": "Vietnam",
+      "rank": "114",
+      "median": "30.5",
+      "male": "29.4",
+      "female": "31.7"
+    },
+    {
+      "country": "Virgin Islands",
+      "rank": "44",
+      "median": "41.0",
+      "male": "39.9",
+      "female": "41.9"
+    },
+    {
+      "country": "Wallis and Futuna",
+      "rank": "104",
+      "median": "32.2",
+      "male": "31.3",
+      "female": "33.4"
+    },
+    {
+      "country": "Palestine",
+      "rank": "186",
+      "median": "21.1",
+      "male": "20.9",
+      "female": "21.3"
+    },
+    {
+      "country": "Western Sahara",
+      "rank": "183",
+      "median": "21.1",
+      "male": "20.9",
+      "female": "21.3"
+    },
+    {
+      "country": "World",
+      "rank": "115",
+      "median": "30.4",
+      "male": "29.6",
+      "female": "31.1"
+    },
+    {
+      "country": "Yemen",
+      "rank": "202",
+      "median": "19.5",
+      "male": "19.3",
+      "female": "19.6"
+    },
+    {
+      "country": "Zambia",
+      "rank": "226",
+      "median": "16.8",
+      "male": "16.6",
+      "female": "16.9"
+    },
+    {
+      "country": "Zimbabwe",
+      "rank": "189",
+      "median": "20.0",
+      "male": "19.6",
+      "female": "20.4"
+    }
+  ]
+}

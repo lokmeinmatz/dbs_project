@@ -317,7 +317,6 @@ function startAPI(expressApp, db) {
 
         let dDeathsPerCase = []
         let  davgAge = []
-        let labels = []
 
         let toSort = []
 
@@ -336,8 +335,6 @@ function startAPI(expressApp, db) {
 
             dDeathsPerCase.push(field.deathsPerCase)
             davgAge.push(field.avg_age)
-            labels.push(field.name)
-
         }
 
         // average of 5
@@ -366,12 +363,9 @@ function startAPI(expressApp, db) {
         }
         if (dDeathsPerCase.length % 5 != 0) averageAge.push(lastAvg / 5)
         
+        let labels = []
 
-        let nLabels = []
-
-        for(let i = 0; i < labels.length; i++) {
-            if (i % 5 == 0) nLabels.push(labels[i]) 
-        }
+        while (labels.length < averageAge.length - 1) labels.push('')
 
 
         // sum, count
@@ -379,7 +373,7 @@ function startAPI(expressApp, db) {
         //console.log(nLabels)
 
         res.json({
-            labels: nLabels,
+            labels,
             datasets: [
                 {
                     label: 'Avg Age', 

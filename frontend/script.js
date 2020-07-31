@@ -226,11 +226,6 @@ async function loaded() {
 
         const data = await (await fetch('/api/corona/death-age')).json()
 
-        for (const ds of data.datasets) {
-            ds.barPercentage = 1.0
-            ds.catergoryPercentage = 1.0
-        }
-        
         deathAge.data.labels = data.labels
         deathAge.data.datasets = data.datasets
 

@@ -391,7 +391,12 @@ function startAPI(expressApp, db) {
                     label: 'Deaths per Case', 
                     yAxisID: 'deaths', 
                     backgroundColor: 'rgba(0, 255, 0, 0.2)',
-                    data: averageDeathsPerCase
+                    data: averageDeathsPerCase,
+                    trendlineLinear: {
+                        style: "rgba(0, 255, 0, 1)",
+                        lineStyle: "dotted|solid",
+                        width: 2
+                    }
                 }
             ]
         })

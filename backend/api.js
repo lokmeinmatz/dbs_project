@@ -93,9 +93,10 @@ function startAPI(expressApp, db) {
 
             if (lastEntry.dayData != null || row.cases >= waveMin) {
                 if (lastEntry.dayData == null) {
+                    //console.log(row.population)
                     lastEntry.dayData = [{
                         date: new Date(row.date),
-                        cases: row.cases
+                        cases: row.cases * 10000 / row.population
                     }]
                     continue
                 }
@@ -115,7 +116,7 @@ function startAPI(expressApp, db) {
 
                 lastEntry.dayData.push({
                     date: new Date(row.date),
-                    cases: row.cases
+                    cases: row.cases * 10000 / row.population
                 })
             }
 
